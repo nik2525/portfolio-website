@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
 const isGithubActions = process.env.GITHUB_ACTIONS === 'true'
 
-// Get the repository name from the environment variables or use an empty string for local development
-const repo = process.env.GITHUB_REPOSITORY?.replace(/.*\//, '') || ''
-const assetPrefix = repo ? `/${repo}/` : ''
-const basePath = repo ? `/${repo}` : ''
+// For GitHub Pages
+const repo = 'portfolio-website' // your repository name
+const isProd = process.env.NODE_ENV === 'production'
+const assetPrefix = isProd ? `/${repo}/` : ''
+const basePath = isProd ? `/${repo}` : ''
 
 const nextConfig = {
   eslint: {
@@ -17,8 +18,8 @@ const nextConfig = {
     unoptimized: true,
   },
   output: 'export',
-  assetPrefix: assetPrefix,
   basePath: basePath,
+  assetPrefix: assetPrefix,
   trailingSlash: true
 }
 
