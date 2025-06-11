@@ -2,8 +2,8 @@
 const isProd = process.env.NODE_ENV === 'production';
 const repo = 'portfolio-website';
 const basePath = isProd ? `/${repo}` : '';
-const assetPrefix = basePath ? `${basePath}/` : '';
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
@@ -13,22 +13,20 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
-    path: assetPrefix,
   },
   output: 'export',
   basePath: basePath,
-  assetPrefix: assetPrefix,
+  assetPrefix: basePath ? `${basePath}/` : '',
   trailingSlash: true,
-  // Ensure static assets are properly handled
-  experimental: {
-    outputFileTracingRoot: './',
+  // Disable image optimization for static export
+  // and use the default loader which works with static exports
+  images: {
+    unoptimized: true,
   },
-  // Copy the public folder to the out directory
-  async exportPathMap(defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
-    return {
-      '/': { page: '/' },
-      ...defaultPathMap,
-    };
+  // Ensure static assets are copied correctly
+  experimental: {
+    // This is now the correct way to set output file tracing root
+    outputFileTracingRoot: undefined, // Let Next.js handle this automatically
   },
 };
 
@@ -36,8 +34,8 @@ const nextConfig = {
 if (isProd) {
   nextConfig.images = {
     ...nextConfig.images,
-    loader: 'imgix',
-    path: '',
+    loader: 'custom',
+    loaderFile: './image-loader.js',
   };
 }
 
