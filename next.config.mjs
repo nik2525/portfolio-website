@@ -7,9 +7,10 @@ const basePath = isProd ? `/${repo}` : '';
 const nextConfig = {
   output: 'export',
   basePath: basePath,
-  assetPrefix: basePath,
+  assetPrefix: basePath ? `${basePath}/` : undefined,
   images: {
     unoptimized: true,
+    path: basePath ? `${basePath}/_next/image` : '/_next/image',
   },
   eslint: {
     ignoreDuringBuilds: true,
@@ -17,13 +18,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  output: 'export',
-  basePath: basePath,
-  assetPrefix: basePath ? `${basePath}/` : '',
   trailingSlash: true,
-  images: {
-    unoptimized: true,
-  },
   distDir: 'out',
 };
 
