@@ -1,28 +1,40 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
+const basePath = process.env.NODE_ENV === 'production' ? '/portfolio-website' : '';
+
+export const viewport: Viewport = {
+  themeColor: '#000000',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+}
+
 export const metadata: Metadata = {
   title: 'Niko Angelo Lubao | Portfolio',
   description: 'Personal portfolio of Niko Angelo Lubao - Web Developer & Designer',
   generator: 'Next.js',
+  metadataBase: new URL(process.env.NODE_ENV === 'production' 
+    ? 'https://nik2525.github.io/portfolio-website' 
+    : 'http://localhost:3000'),
   icons: {
     icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon.ico', sizes: 'any' },
+      { url: `${basePath}/favicon.svg`, type: 'image/svg+xml' },
+      { url: `${basePath}/favicon.ico`, sizes: 'any' },
     ],
     apple: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: `${basePath}/favicon.svg`, type: 'image/svg+xml' },
     ],
   },
-  manifest: '/site.webmanifest',
-  themeColor: '#ffffff',
+  manifest: `${basePath}/site.webmanifest`,
   openGraph: {
     title: 'Niko Angelo Lubao | Portfolio',
     description: 'Personal portfolio of Niko Angelo Lubao - Web Developer & Designer',
-    url: 'https://your-portfolio-url.com',
+    url: 'https://nik2525.github.io/portfolio-website',
     siteName: 'Niko Angelo Lubao',
     locale: 'en_US',
     type: 'website',

@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
 const repo = 'portfolio-website';
-const assetPrefix = isProd ? `/${repo}` : '';
 const basePath = isProd ? `/${repo}` : '';
+const assetPrefix = basePath ? `${basePath}/` : '';
 
 const nextConfig = {
   eslint: {
@@ -13,28 +13,32 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    path: assetPrefix,
   },
   output: 'export',
   basePath: basePath,
   assetPrefix: assetPrefix,
   trailingSlash: true,
-  publicRuntimeConfig: {
-    basePath: basePath,
+  // Ensure static assets are properly handled
+  experimental: {
+    outputFileTracingRoot: './',
   },
-  env: {
-    NEXT_PUBLIC_BASE_PATH: basePath,
-  },
-  // Fix for static export with images
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
-      type: 'asset/resource',
-      generator: {
-        filename: 'static/[hash][ext][query]',
-      },
-    });
-    return config;
+  // Copy the public folder to the out directory
+  async exportPathMap(defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
+    return {
+      '/': { page: '/' },
+      ...defaultPathMap,
+    };
   },
 };
+
+// For GitHub Pages, we need to set the base path for static assets
+if (isProd) {
+  nextConfig.images = {
+    ...nextConfig.images,
+    loader: 'imgix',
+    path: '',
+  };
+}
 
 export default nextConfig;
