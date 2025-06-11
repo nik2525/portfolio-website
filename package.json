@@ -5,7 +5,7 @@
   "homepage": "/portfolio-website",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export --output-dir out",
+    "build": "next build && next export -o out",
     "preview": "npx serve@latest out",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d out -t true",
