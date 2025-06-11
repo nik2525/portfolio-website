@@ -5,6 +5,12 @@ const basePath = isProd ? `/${repo}` : '';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: basePath,
+  assetPrefix: basePath,
+  images: {
+    unoptimized: true,
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
