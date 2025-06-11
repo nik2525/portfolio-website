@@ -13,13 +13,11 @@ const nextConfig = {
   },
   output: 'export',
   basePath: basePath,
-  experimental: {
-    staticHtml: true,
-  },
+  assetPrefix: basePath ? `${basePath}/` : '',
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },
-  // Ensure static files are copied correctly
   distDir: 'out',
 };
 
