@@ -1,55 +1,45 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-// Get the directory name in ES module
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const isProd = process.env.NODE_ENV === 'production';
-const repo = 'portfolio-website';
-const basePath = isProd ? `/${repo}` : '';
-
-// For GitHub Pages
-const assetPrefix = isProd ? `/${repo}/` : '';
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Static HTML export configuration
   output: 'export',
-  basePath: basePath,
-  assetPrefix: assetPrefix,
-  // Ensure static assets are properly referenced
+  
+  // Base path for GitHub Pages deployment
+  basePath: process.env.NODE_ENV === 'production' ? '/portfolio-website' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio-website/' : '',
+  
+  // Ensure trailing slashes for GitHub Pages compatibility
+  trailingSlash: true,
+  
+  // Image optimization for static export
   images: {
     unoptimized: true,
-    path: assetPrefix,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  // Ensure static export
-  trailingSlash: true,
-  // Fix for static assets in production
+  
+  // Build output directory
+  distDir: 'out',
+  
+  // Environment variables
   env: {
-    NEXT_PUBLIC_BASE_PATH: basePath,
+    NEXT_PUBLIC_BASE_PATH: process.env.NODE_ENV === 'production' ? '/portfolio-website' : '',
   },
-  // Fix for CSS and other static assets
+  
+  // Webpack configuration for path aliases
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.alias = {
         ...config.resolve.alias,
-        '@': path.resolve(__dirname, './'),
+        // Add any path aliases here
+        '@': new URL('./', import.meta.url).pathname,
       };
     }
     return config;
   },
-  // Output directory for static export
-  distDir: 'out',
-  // Disable image optimization API for static export
-  images: {
-    unoptimized: true,
-  },
+  
+  // Optional: Enable React Strict Mode
+  reactStrictMode: true,
+  
+  // Optional: Configure page extensions
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
 };
 
 export default nextConfig;

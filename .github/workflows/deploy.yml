@@ -6,22 +6,18 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
 env:
   NODE_VERSION: 20
+  GITHUB_ACTIONS: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
     
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,7 +25,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.x'
+          node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
 
       - name: Install dependencies
@@ -39,6 +35,7 @@ jobs:
         run: |
           npm run build
           touch out/.nojekyll
+          touch out/.no-jekyll
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -49,14 +46,11 @@ jobs:
           path: 'out/.'
 
   deploy:
-    needs: build
-    permissions:
-      pages: write
-      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

@@ -15,7 +15,7 @@ interface AnimatedTextProps {
 
 export function AnimatedText({ text, className, once = true }: AnimatedTextProps) {
   const textRef = useRef<HTMLDivElement>(null)
-  const isInView = useInView(textRef, { once })
+  const isInView = useInView(textRef as React.RefObject<Element>, { once })
 
   return (
     <div ref={textRef} className={cn("overflow-hidden", className)}>
