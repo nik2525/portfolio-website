@@ -200,7 +200,7 @@ export default function About() {
             >
               <div className="w-80 h-96 sm:w-96 sm:h-[500px] rounded-xl overflow-hidden relative">
                 <img
-                  src="/images/profile-main.jpg"
+                  src="./images/profile-main.jpg"
                   alt="Niko Angelo - Computer Science Student"
                   className="w-full h-full object-cover"
                 />
