@@ -57,7 +57,7 @@ export default function Navigation() {
             className="flex items-center transition-transform duration-200 hover:scale-105"
             aria-label="Go to top"
           >
-            <img src="/images/logoniko-removebg-preview.png" alt="NKO Logo" className="h-10 w-auto" />
+            <img src="./images/logoniko-removebg-preview.png" alt="NKO Logo" className="h-10 w-auto" />
           </button>
 
           {/* Desktop Navigation */}
