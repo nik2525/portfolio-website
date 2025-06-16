@@ -174,7 +174,7 @@ export default function Hero() {
 
               <a 
                 href="./public/pdf/LUBAO_PORTFOLIO.pdf" 
-                download="LUBAO_PORTFOLIO.pdf"
+                download="./public/pdf/LUBAO_PORTFOLIO.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`group relative inline-flex items-center justify-center overflow-hidden border-2 px-8 py-3 transition-all duration-300 transform hover:scale-105 shadow-lg rounded-md ${
