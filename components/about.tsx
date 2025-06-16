@@ -160,7 +160,7 @@ export default function About() {
                   Hi! I'm{" "}
                   <strong className={theme === "dark" ? "text-white" : "text-gray-900"}>Niko Angelo Lubao</strong>, a{" "}
                   <strong className={theme === "dark" ? "text-white" : "text-gray-900"}>
-                    Computer Science student
+                    Computer Science Graduate
                   </strong>{" "}
                   at the University of the Immaculate Conception. I am a fast learner with a strong drive for efficiency
                   and accuracy, committed to completing tasks promptly and with precision. My perfectionist mindset
