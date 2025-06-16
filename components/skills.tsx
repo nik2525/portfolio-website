@@ -201,8 +201,8 @@ export default function Skills() {
           name: "TOPCIT 9TH, 10TH & 11TH LEVEL 2 SCORER", 
           issuer: "TOPCIT",
           date: "2024",
-          image: "./images/cert/TOPCIT.PNG",
-          link: "./images/cert/TOPCIT.PNG"
+          image: "./images/cert/TOPCIT.png",
+          link: "./images/cert/TOPCIT.png"
         },
       ],
     },
