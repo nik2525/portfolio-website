@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: asset('/images/meta img.png'),
+        url: asset('./images/meta img.png'),
         width: 1200,
         height: 630,
         alt: 'Niko Angelo Lubao Portfolio',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Niko Angelo Lubao | Portfolio',
     description: 'Personal portfolio of Niko Angelo Lubao - Web Developer & Designer',
-    images: [asset('/images/meta img.png')],
+    images: [asset('./images/meta img.png')],
   },
 }
 
