@@ -172,7 +172,7 @@ export default function Skills() {
           name: "JavaScript Certificate", 
           issuer: "Board Infinity (Coursera)",
           date: "2025",
-          image: "./images/cert/js-cert.png",
+          image: "./images/cert/JS-cert.png",
           link: "./pdf/JS CERTIFICATE.pdf"
         },
         { 
@@ -186,7 +186,7 @@ export default function Skills() {
           name: "Techstars Certificate", 
           issuer: "Techstars",
           date: "2025",
-          image: "./images/cert/techstars-cert.png",
+          image: "./images/cert/Techstars-cert.png",
           link: "./pdf/TECHSTARS CERTIFICATE.pdf"
         },
         { 
