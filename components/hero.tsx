@@ -173,7 +173,7 @@ export default function Hero() {
               </Button>
 
               <a 
-                href="/pdf/LUBAO_PORTFOLIO.pdf" 
+                href="./public/pdf/LUBAO_PORTFOLIO.pdf" 
                 download="LUBAO_PORTFOLIO.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
