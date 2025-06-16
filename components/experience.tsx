@@ -8,13 +8,24 @@ export default function Experience() {
 
   const experienceData = [
     {
-      title: "Data Entry ",
-      company: "National Commission of Senior Citizens ",
+      title: "Front End Developer",
+      company: "Davao City Water District",
+      period: "2025",
+      description:
+        "Developing web applications for Davao City Water District using React, TypeScript, and various React libraries. Maintaining excellent academic performance while working on practical projects.",
+      image: "./images/dcwd.jpg",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Git"],
+      sortYear: 2025
+    },
+    {
+      title: "Winner - Favorite Startup",
+      company: "Techstars Startup Weekend Davao",
       period: "2023",
       description:
-        "Organized senior citizen data from personal interviews and physical records onto their online structured database of the National Commission for Senior Citizens. Ensured accuracy, consistency, and confidentiality while maintaining data integrity and supporting efficient retrieval for reporting and analysis.",
-      image: "./images/ncsc.jpg",
-      technologies: ["Data Entry", "Interview"],
+        "Awarded 'Favorite Startup' and received a 10,000 PHP cash prize from WAL Software for developing 'Locobus' - an innovative public transportation solution that enhances commuter experience through real-time tracking, route optimization, and cashless payment integration. Led a cross-functional team to design and pitch a comprehensive mobility platform that addresses urban transportation challenges in Davao City.",
+      image: "./images/Techstars.jpg",
+      technologies: ["Startup Pitching", "Product Development", "Team Leadership", "Public Speaking"],
+      sortYear: 2023
     },
     {
       title: "Computer Science Student",
@@ -22,17 +33,9 @@ export default function Experience() {
       period: "2021 - 2025",
       description:
         "Developed responsive web applications using React, JavaScript, TypeScript, and various React libraries. Gained hands-on experience in data annotation and training AI models using Python and Google Colab, following best practices for performance, scalability, and accessibility",
-      image: "./images/graduatepicfinal.jpg",
+      image: "./images/graduatepicfinal.png",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Java", "Git", "Xampp", "MySQL", "Artificial Intelligence", "AI Models", "Model Training"],
-    },
-    {
-      title: "UI/UX Designer",
-      company: "University Projects",
-      period: "2023",
-      description:
-        "Designed intuitive user interfaces for various academic and personal projects. Created wireframes, prototypes, and design systems. Conducted user research and usability testing to improve design decisions.",
-      image: "./images/web-starbucks.jpg",
-      technologies: ["Figma", "Adobe Photoshop", "Sketch", "Prototyping", "User Research"],
+      sortYear: 2025
     },
     {
       title: "Software Quality Tester",
@@ -42,6 +45,27 @@ export default function Experience() {
         "Conducted comprehensive manual testing of web applications and software systems. Created User Acceptance Test (UAT) scenarios, documented detailed test cases, and prepared bug reports to ensure functionality, usability, and adherence to quality standards.",
       image: "./images/sqa.png",
       technologies: ["Manual Testing", "Bug Tracking"],
+      sortYear: 2024
+    },
+    {
+      title: "UI/UX Designer",
+      company: "University Projects",
+      period: "2023",
+      description:
+        "Designed intuitive user interfaces for various academic and personal projects. Created wireframes, prototypes, and design systems. Conducted user research and usability testing to improve design decisions.",
+      image: "./images/web-starbucks.jpg",
+      technologies: ["Figma", "Adobe Photoshop", "Sketch", "Prototyping", "User Research"],
+      sortYear: 2023
+    },
+    {
+      title: "Data Entry",
+      company: "National Commission of Senior Citizens",
+      period: "2023",
+      description:
+        "Organized senior citizen data from personal interviews and physical records onto their online structured database of the National Commission for Senior Citizens. Ensured accuracy, consistency, and confidentiality while maintaining data integrity and supporting efficient retrieval for reporting and analysis.",
+      image: "./images/ncsc.jpg",
+      technologies: ["Data Entry", "Interview"],
+      sortYear: 2023
     },
     {
       title: "Graphics Designer",
@@ -51,17 +75,9 @@ export default function Experience() {
         "Designed visually engaging graphics for diverse clients and projects as part of Click Creativity, a marketing startup. Created brand-aligned logos, social media content, and marketing materials to support promotional campaigns and client branding initiatives.",
       image: "./images/click-creatives.png",
       technologies: ["Adobe Photoshop", "Illustrator", "Canva", "Branding", "Print Design"],
-    },
-    {
-      title: "Front End Developer",
-      company: "Davao City Water District",
-      period: "2025",
-      description:
-        "Developing web applications for Davao City Water District using React, TypeScript, and various React libraries. Maintaining excellent academic performance while working on practical projects.",
-      image: "./images/dcwd.jpg",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Git"],
-    },
-  ]
+      sortYear: 2021
+    }
+  ].sort((a, b) => b.sortYear - a.sortYear)
 
   return (
     <section

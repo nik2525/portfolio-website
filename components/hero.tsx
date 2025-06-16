@@ -172,10 +172,12 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
               </Button>
 
-              <Button
-                variant="outline"
-                size="lg"
-                className={`group relative overflow-hidden border-2 px-8 py-3 transition-all duration-300 transform hover:scale-105 shadow-lg ${
+              <a 
+                href="/pdf/LUBAO_PORTFOLIO.pdf" 
+                download="LUBAO_PORTFOLIO.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group relative inline-flex items-center justify-center overflow-hidden border-2 px-8 py-3 transition-all duration-300 transform hover:scale-105 shadow-lg rounded-md ${
                   theme === "dark"
                     ? "border-gray-300 text-gray-300 hover:bg-gray-300 hover:text-black"
                     : "border-gray-700 text-gray-700 hover:bg-gray-700 hover:text-white"
@@ -184,7 +186,7 @@ export default function Hero() {
                 <Download className="h-4 w-4 mr-2" />
                 <span className="relative z-10">Download CV</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-current/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-              </Button>
+              </a>
             </div>
           </div>
 

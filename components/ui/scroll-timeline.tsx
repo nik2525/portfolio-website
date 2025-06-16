@@ -217,16 +217,16 @@ export function ScrollTimeline({ items, className, theme = 'light' }: ScrollTime
                         className={`transition-all duration-500 group-hover:scale-105 ${
                           item.image?.includes('graduatepicfinal') 
                             ? 'object-contain max-h-[80%] w-auto shadow-lg rounded-lg' 
-                            : item.image?.includes('click-creatives')
+                            : item.image?.includes('click-creatives') || item.image?.includes('Techstars')
                             ? 'object-contain max-h-full max-w-full rounded-lg shadow-md'
                             : 'object-cover w-full h-full rounded-lg'
                         }`}
                         style={{
                           maxHeight: item.image?.includes('graduatepicfinal') ? '80%' : '100%',
                           maxWidth: '100%',
-                          width: item.image?.includes('graduatepicfinal') ? 'auto' : '100%',
-                          height: item.image?.includes('graduatepicfinal') ? 'auto' : '100%',
-                          objectFit: item.image?.includes('graduatepicfinal') || item.image?.includes('click-creatives') ? 'contain' : 'cover',
+                          width: (item.image?.includes('graduatepicfinal') || item.image?.includes('Techstars')) ? 'auto' : '100%',
+                          height: (item.image?.includes('graduatepicfinal') || item.image?.includes('Techstars')) ? 'auto' : '100%',
+                          objectFit: (item.image?.includes('graduatepicfinal') || item.image?.includes('click-creatives') || item.image?.includes('Techstars')) ? 'contain' : 'cover',
                           backgroundColor: 'rgba(255, 255, 255, 0.1)',
                           backdropFilter: 'blur(2px)'
                         }}

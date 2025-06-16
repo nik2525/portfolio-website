@@ -21,8 +21,13 @@ import {
   SiCanva,
   SiXampp,
   SiOpenai,
+  SiKotlin,
+  SiFirebase,
+  SiAndroidstudio,
+  SiGrafana
 } from "react-icons/si"
-import { Coffee, TestTube, Database, Briefcase, FileText, Monitor, Palette, Brain } from "lucide-react"
+import { FaJava } from "react-icons/fa";
+import { Monitor, Wrench } from "lucide-react"
 import { StarBackground } from "@/components/ui/star-background"
 
 type Skill = {
@@ -129,6 +134,7 @@ export default function Skills() {
         { name: "CSS3", icon: <SiCss3 size={24} /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss size={24} /> },
         { name: "Next.js", icon: <SiNextdotjs size={24} /> },
+        { name: "Kotlin", icon: <SiKotlin size={24} /> },
       ],
     },
     {
@@ -136,7 +142,9 @@ export default function Skills() {
       skills: [
         { name: "Node.js", icon: <SiNodedotjs size={24} /> },
         { name: "Python", icon: <SiPython size={24} /> },
+        { name: "Java", icon: <FaJava size={24} /> },
         { name: "MySQL", icon: <SiMysql size={24} /> },
+        { name: "Firebase", icon: <SiFirebase size={24} /> },
         { name: "XAMPP", icon: <SiXampp size={24} /> },
       ],
     },
@@ -147,6 +155,9 @@ export default function Skills() {
         { name: "Figma", icon: <SiFigma size={24} /> },
         { name: "Photoshop", icon: <SiAdobephotoshop size={24} /> },
         { name: "Canva", icon: <SiCanva size={24} /> },
+        { name: "Android Studio", icon: <SiAndroidstudio size={24} /> },
+        { name: "Grafana", icon: <SiGrafana size={24} /> },
+        { name: "Computer Troubleshooting", icon: <Wrench size={24} /> },
         { name: "Vibe Coding", icon: <SiOpenai size={24} />, description: "Windsurf, Cursor, ChatGPT" },
       ],
     },

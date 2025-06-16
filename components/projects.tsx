@@ -74,6 +74,15 @@ export default function Projects() {
         "images/Start Kit 2.png"
       ]
     },
+    {
+      id: 7,
+      title: "Locobus - Public Transport App",
+      description: "Awarded 'Favorite Startup' at Techstars Davao, Locobus is an innovative public transport solution with real-time tracking and cashless payments.",
+      image: "/images/Techstars.jpg",
+      category: "Graphics and Design",
+      gradient: "linear-gradient(135deg, #6a11cb, #2575fc)",
+      link: "https://www.figma.com/proto/LYt8WgznEY9tAjefec8iHd/LocoBus-Final-Frames?page-id=0%3A1&node-id=47-618&starting-point-node-id=2%3A471&t=xVJVFcEGCMXSvogz-1"
+    },
   ]
 
   const categories = ["All", "Web App", "Graphics and Design", "Full Stack"]
