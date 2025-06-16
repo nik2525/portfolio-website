@@ -13,7 +13,7 @@ export default function Experience() {
       period: "2023",
       description:
         "Organized senior citizen data from personal interviews and physical records onto their online structured database of the National Commission for Senior Citizens. Ensured accuracy, consistency, and confidentiality while maintaining data integrity and supporting efficient retrieval for reporting and analysis.",
-      image: "/images/ncsc.jpg",
+      image: "./images/ncsc.jpg",
       technologies: ["Data Entry", "Interview"],
     },
     {
@@ -22,7 +22,7 @@ export default function Experience() {
       period: "2021 - 2025",
       description:
         "Developed responsive web applications using React, JavaScript, TypeScript, and various React libraries. Gained hands-on experience in data annotation and training AI models using Python and Google Colab, following best practices for performance, scalability, and accessibility",
-      image: "/images/graduatepicfinal.jpg",
+      image: "./images/graduatepicfinal.jpg",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Java", "Git", "Xampp", "MySQL", "Artificial Intelligence", "AI Models", "Model Training"],
     },
     {
@@ -31,7 +31,7 @@ export default function Experience() {
       period: "2023",
       description:
         "Designed intuitive user interfaces for various academic and personal projects. Created wireframes, prototypes, and design systems. Conducted user research and usability testing to improve design decisions.",
-      image: "/images/web-starbucks.jpg",
+      image: "./images/web-starbucks.jpg",
       technologies: ["Figma", "Adobe Photoshop", "Sketch", "Prototyping", "User Research"],
     },
     {
@@ -40,7 +40,7 @@ export default function Experience() {
       period: "2023-2024",
       description:
         "Conducted comprehensive manual testing of web applications and software systems. Created User Acceptance Test (UAT) scenarios, documented detailed test cases, and prepared bug reports to ensure functionality, usability, and adherence to quality standards.",
-      image: "/images/sqa.png",
+      image: "./images/sqa.png",
       technologies: ["Manual Testing", "Bug Tracking"],
     },
     {
@@ -49,7 +49,7 @@ export default function Experience() {
       period: "2021 - Present",
       description:
         "Designed visually engaging graphics for diverse clients and projects as part of Click Creativity, a marketing startup. Created brand-aligned logos, social media content, and marketing materials to support promotional campaigns and client branding initiatives.",
-      image: "/images/click-creatives.png",
+      image: "./images/click-creatives.png",
       technologies: ["Adobe Photoshop", "Illustrator", "Canva", "Branding", "Print Design"],
     },
     {
@@ -58,7 +58,7 @@ export default function Experience() {
       period: "2025",
       description:
         "Developing web applications for Davao City Water District using React, TypeScript, and various React libraries. Maintaining excellent academic performance while working on practical projects.",
-      image: "/images/dcwd.jpg",
+      image: "./images/dcwd.jpg",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Git"],
     },
   ]
