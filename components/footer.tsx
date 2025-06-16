@@ -35,7 +35,7 @@ export default function Footer() {
               className="flex items-center transition-transform duration-200 hover:scale-105"
               aria-label="Go to top"
             >
-              <img src="/images/logoniko-removebg-preview.png" alt="NKO Logo" className="h-8 w-auto" />
+              <img src="./images/logoniko-removebg-preview.png" alt="NKO Logo" className="h-8 w-auto" />
             </button>
             <div className="flex space-x-4">
               {socialLinks.map((link, index) => (
