@@ -204,8 +204,8 @@ export default function Skills() {
           name: "Davao City Water District Internship", 
           issuer: "Davao City Water District",
           date: "2025",
-          image: "./images/cert/Water%20District%20Certificate%20Final.png",
-          link: "./pdf/Water%20District%20Certificate%20Final.pdf"
+          image: "./images/cert/Water District Certificate Final.png",
+          link: "./pdf/Water District Certificate Final.pdf"
         },
 
         { 
