@@ -158,51 +158,51 @@ export default function Skills() {
           name: "AWS Certificate", 
           issuer: "LearnKarts (Coursera)",
           date: "2025",
-          image: "images/cert/AWS-cert.png",
-          link: "/pdf/AWS CERTIFICATE.pdf"
+          image: "./images/cert/AWS-cert.png",
+          link: "./pdf/AWS CERTIFICATE.pdf"
         },
         { 
           name: "English for Effective Business Speaking", 
           issuer: "The Hong Kong University of Science and Technology (Coursera)",
           date: "2025",
-          image: "images/cert/eng-cert.png",
-          link: "/pdf/ENGLISH CERTIFICATE.pdf"
+          image: "./images/cert/eng-cert.png",
+          link: "./pdf/ENGLISH CERTIFICATE.pdf"
         },
         { 
           name: "JavaScript Certificate", 
           issuer: "Board Infinity (Coursera)",
           date: "2025",
-          image: "images/cert/js-cert.png",
-          link: "/pdf/JS CERTIFICATE.pdf"
+          image: "./images/cert/js-cert.png",
+          link: "./pdf/JS CERTIFICATE.pdf"
         },
         { 
           name: "React Certificate", 
           issuer: "Board Infinity (Coursera)",
           date: "2025",
-          image: "images/cert/react-cert.png",
-          link: "/pdf/REACT CERTIFICATE.pdf"
+          image: "./images/cert/react-cert.png",
+          link: "./pdf/REACT CERTIFICATE.pdf"
         },
         { 
           name: "Techstars Certificate", 
           issuer: "Techstars",
           date: "2025",
-          image: "images/cert/techstars-cert.png",
-          link: "/pdf/TECHSTARS CERTIFICATE.pdf"
+          image: "./images/cert/techstars-cert.png",
+          link: "./pdf/TECHSTARS CERTIFICATE.pdf"
         },
         { 
           name: "Davao City Water District Internship", 
           issuer: "Davao City Water District",
           date: "2025",
-          image: "images/cert/Water District Certificate.jpg",
-          link: "/pdf/Water District Certificate.pdf"
+          image: "./images/cert/Water District Certificate.jpg",
+          link: "./pdf/Water District Certificate.pdf"
         },
 
         { 
           name: "TOPCIT 9TH, 10TH & 11TH LEVEL 2 SCORER", 
           issuer: "TOPCIT",
           date: "2024",
-          image: "images/cert/TOPCIT.PNG",
-          link: "images/cert/TOPCIT.PNG"
+          image: "./images/cert/TOPCIT.PNG",
+          link: "./images/cert/TOPCIT.PNG"
         },
       ],
     },
